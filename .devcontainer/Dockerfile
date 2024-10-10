@@ -9,10 +9,11 @@ RUN apt-get update && apt-get install -y \
   lsb-release
 
 # Configuração do MySQL 8
+# Adicionar o repositório oficial do MySQL 8
 RUN wget https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb && \
-  dpkg -i mysql-apt-config_0.8.22-1_all.deb && \
-  apt-get update && \
-  apt-get install -y mysql-server
+    dpkg -i mysql-apt-config_0.8.22-1_all.deb || true && \
+    apt-get update && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y mysql-server
 
 # Instalação do Quarkus CLI
 RUN curl -L https://github.com/quarkusio/quarkus/releases/download/2.16.0.Final/quarkus-cli-2.16.0.Final-linux-x86_64 -o /usr/local/bin/quarkus && \
