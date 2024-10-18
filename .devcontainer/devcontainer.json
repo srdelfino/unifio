@@ -6,4 +6,3 @@
   "forwardPorts": [3306, 8080, 9090], 
   "postCreateCommand": "service mysql start"
 }
-  
