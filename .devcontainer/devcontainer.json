@@ -1,19 +1,9 @@
 {
-    "name": "Java 21, MySQL 8, Quarkus",
-    "image": "mcr.microsoft.com/devcontainers/base:ubuntu", 
-    "build": {
-      "dockerfile": "Dockerfile"
-    },
-    "forwardPorts": [8080, 3306],
-    "postCreateCommand": "apt-get update && apt-get install -y maven",
-    "customizations": {
-      "vscode": {
-        "extensions": [
-          "redhat.vscode-quarkus",
-          "vscjava.vscode-java-pack",
-          "ms-azuretools.vscode-docker"
-        ]
-      }
-    }
-  }
+  "name": "UNIFIO Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [3306, 8080, 9090], 
+  "postCreateCommand": "service mysql start"
+}
   
