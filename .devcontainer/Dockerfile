@@ -11,9 +11,15 @@ ENV MYSQL_PASSWORD=q1w2e3r4
 
 # Instale pacotes básicos
 RUN apt-get update && \
+<<<<<<< HEAD
     apt-get install -y curl git maven mysql-server openjdk-21-jdk unzip wget zip && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     curl -s "https://get.sdkman.io" | bash && \
     source "$HOME/.sdkman/bin/sdkman-init.sh" && \
     sdk install springboot     
+=======
+    apt-get install -y curl git maven mysql-server openjdk-21-jdk && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+>>>>>>> 57b066b (Teste)
