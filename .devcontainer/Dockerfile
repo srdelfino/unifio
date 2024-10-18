@@ -16,4 +16,4 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/* && \
     curl -s "https://get.sdkman.io" | bash && \
     source "$HOME/.sdkman/bin/sdkman-init.sh" && \
-    sdk install springboot     
+    sdk install springboot
